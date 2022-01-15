@@ -1,0 +1,20 @@
+% See https://wiki.contextgarden.net/Letter
+
+\usemodule[letter]
+
+\setuppapersize[letter]
+
+\starttext
+
+\startletter
+  [opening={Dear Reader,},
+    closing={Best regards,},
+    signature={The TeXnician}]
+
+  \input knuth
+
+  More text from me blah blah blah.
+
+\stopletter
+
+\stoptext

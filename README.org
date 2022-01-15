@@ -1,0 +1,36 @@
+#+title: Life In ConTeXt
+
+Exploring the use of [[https://wiki.contextgarden.net/Main_Page][ConTeXt]] for a variety of personal use-cases.
+
+** Roadmap
+
+*** Workflows
+
+- [ ] vanilla context files
+- [ ] exporting from org via [[https://github.com/Jason-S-Ross/ox-context][ox-context]]
+- [ ] docker container (via [[https://hub.docker.com/r/contextgarden/context][contextgarden/context]])
+
+*** Document Types
+
+- [X] letter
+- [ ] slides
+- [ ] report
+- [ ] [[https://wiki.contextgarden.net/Cover_Pages][cover pages]]
+- [ ] article
+- [ ] book
+- [ ] CV
+- [ ] invoice
+
+*** Other features
+
+- [ ] PDF metadata 
+- [ ] environment files
+- [ ] system fonts
+- [ ] lua scripting
+
+** References
+
+*** Emacs
+
+- [[https://github.com/Jason-S-Ross/ox-context][ox-context]]
+- [[https://github.com/Jason-S-Ross/ox-context-examples][ox-context-examples]]
