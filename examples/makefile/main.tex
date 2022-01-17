@@ -1,0 +1,40 @@
+% Simple tex document.
+% See:
+% - https://www.contextgarden.net/Dummy_text
+% - https://www.pragma-ade.com/general/magazines/mag-0007.pdf
+
+\usemodule[ipsum,visual]
+
+\setuppapersize[letter]
+
+\setupinteraction
+  [state=start,
+    title={Do Makefiles Really Work?},
+    subtitle={An Example},
+    author={Jerry Q. Hacker},
+    keyword={tex,context,typesetting,examples}]
+
+
+
+\starttext
+
+\title{Do Makefiles Really Work?}
+
+\section{Knuth}
+\input knuth
+
+\section{Tufte}
+\input tufte
+
+\section{Lorem}
+\ipsum
+
+\section{Fake}
+\subsection{Random Words}
+\fakenwords{100}{2}
+
+\subsection{Lines}
+\fakelines{3}{5}
+
+
+\stoptext
