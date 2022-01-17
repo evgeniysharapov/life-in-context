@@ -6,6 +6,7 @@ Exploring the use of [[https://wiki.contextgarden.net/Main_Page][ConTeXt]] for a
 
 *** Workflows
 
+- [X] Make(.tex -> .pdf)
 - [X] Emacs(.tex -> .pdf) (via auctex)
 - [X] Emacs(.org -> .tex -> .pdf) (via [[https://github.com/Jason-S-Ross/ox-context][ox-context]])
 - [ ] Emacs(.org -> .tex -> .pdf) (via [[https://github.com/Jason-S-Ross/ox-context][ox-context]] with a custom environment)
@@ -25,8 +26,11 @@ Exploring the use of [[https://wiki.contextgarden.net/Main_Page][ConTeXt]] for a
 
 *** Other features
 
-- [ ] PDF metadata 
+- [X] PDF metadata
 - [ ] environment files
+- [ ] diagrams (e.g. workflow)
+- [ ] headers & footers
+- [ ] [[https://wiki.contextgarden.net/Modes][modes]]
 - [ ] system fonts
 - [ ] lua scripting
 
