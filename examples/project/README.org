@@ -1,0 +1,12 @@
+* Overview
+
+- a *project* links one or more *products* to their *environment*
+- a *product* contains several *components*
+- an *environment* defines the common layout (etc.) of a *project*
+
+![Project Structure](https://www.contextgarden.net/File:Project-structure.png)
+
+
+* References
+
+- [[https://www.contextgarden.net/Project_structure][Project structure]]
