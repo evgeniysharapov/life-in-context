@@ -73,7 +73,7 @@ if not utilitydata.structures.counters then utilitydata.structures.counters = { 
 
 utilitydata.structures.counters.collected={
  ["chemical"]={
-  { 0 },
+  { 0, 0 },
  },
  ["combination"]={
   { 0 },
@@ -82,46 +82,46 @@ utilitydata.structures.counters.collected={
   { 0 },
  },
  ["figure"]={
-  { 0 },
+  { 0, 0 },
  },
  ["footnote"]={
   { 0 },
  },
  ["formula"]={
-  { 0 },
+  { 0, 0 },
  },
  ["graphic"]={
-  { 0 },
+  { 0, 0 },
  },
  ["intermezzo"]={
-  { 0 },
+  { 0, 0 },
  },
  ["itemgroup:itemize"]={
-  { 0 },
+  { 0, 0 },
  },
  ["itemgroup:itemize:note"]={
-  { 0 },
+  { 0, 0 },
  },
  ["linenote"]={
   { 0 },
  },
  ["paragraph"]={
-  { 0 },
+  { 0, 0 },
  },
  ["realpage"]={
-  { 0 },
+  { 1 },
  },
  ["subpage"]={
-  { 0 },
+  { 1 },
  },
  ["table"]={
-  { 0 },
+  { 0, 0 },
  },
  ["textnote:note"]={
   { 0 },
  },
  ["userpage"]={
-  { 0 },
+  { 1 },
  },
 }
 
@@ -129,12 +129,33 @@ if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.lists then utilitydata.structures.lists = { } end
 
 utilitydata.structures.lists.collected={
+ {
+  ["metadata"]=1,
+  ["numberdata"]=3,
+  ["references"]={
+   ["block"]="bodypart",
+   ["internal"]=1,
+   ["realpage"]=1,
+   ["section"]=0,
+  },
+  ["titledata"]={
+   ["label"]="chapter",
+   ["title"]="Example: Metadata",
+  },
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
 if not utilitydata.structures.pages then utilitydata.structures.pages = { } end
 
 utilitydata.structures.pages.collected={
+ {
+  ["block"]="bodypart",
+  ["number"]=1,
+  ["numberdata"]=4,
+  ["prefixdata"]=5,
+  ["state"]="start",
+ },
 }
 
 if not utilitydata.structures then utilitydata.structures = { } end
@@ -197,7 +218,34 @@ utilitydata.job.embedded.collected={
 }
 
 utilitydata.job.packed={
- ["index"]={},
+ ["index"]={
+  {
+   ["catcodes"]=8,
+   ["coding"]="tex",
+   ["kind"]="section",
+   ["level"]=2,
+   ["name"]="title",
+   ["nolist"]=true,
+  },
+  { 0, 0 },
+  {
+   ["block"]="bodypart",
+   ["conversionset"]="default",
+   ["hidenumber"]=true,
+   ["language"]="en",
+   ["numbers"]=2,
+   ["separatorset"]="default",
+   ["set"]="all",
+  },
+  {
+   ["conversionset"]="pagenumber",
+  },
+  {
+   ["connector"]="–",
+   ["prefix"]="no",
+   ["set"]="part",
+  },
+ },
  ["keys"]={
   ["directives"]=true,
   ["metadata"]=true,

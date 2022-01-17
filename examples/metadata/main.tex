@@ -1,5 +1,23 @@
-\author{Jerry Q. Hacker}
+% Example: Setting PDF metadata.
+
+% See https://wiki.contextgarden.net/Interaction#PDF_Headers_and_Custom_Properties
+% NOTES:
+% - The "subtitle" here maps to "subject" in PDF metadata. Using
+%   "subject" here does NOT work!
+% - Note the singular "keyword", using "keywords" does NOT work!
+
+\setuppapersize[letter]
+
+\setupinteraction
+  [state=start,
+    title={Example: Metadata},
+    subtitle={Exploring Metadata in ConTeXt},
+    author={Jerry Q. Hacker},
+    keyword={tex,context,typesetting,examples}]
+    
+% OPTIONAL: Add arbitrary key-value pairs.
+\pdfbackendsetinfo{foo}{bar}
 
 \starttext
-Hello!
+\title{Example: Metadata}
 \stoptext
