@@ -1,0 +1,67 @@
+# Example of using ox-context.
+# See https://github.com/Jason-S-Ross/ox-context
+
+#+title: Example: ox-context
+#+author: Jerry Q. Hacker
+#+bibliography: references.bib
+
+#+options: syntax:vim
+#+context_header_extra: \setuppapersize[letter]
+
+
+* An Example Document
+
+This is an example of using \ConTeXt{} to format a document.
+
+It can be exported via ~org-export-dispatch~ using =C-c C-e C o=.
+
+* Emphasis
+
+Text can be formatted as:
+
+- *Text can be bold*
+- /Text can be italic/
+- _Text can be underlined_
+- =Text can be verbatim=
+- ~Text can be code~
+- +Text can be strikethrough+
+
+
+* Links
+
+Links work!
+
+Here is a link to [[https://example.com/][example.com]].
+
+
+* Tables
+
+| name | description       |
+|------+-------------------|
+| foo  | A thing that foos |
+| bar  | A thing that bars |
+| baz  | A thing that bazs |
+
+
+* Images
+
+* Diagrams
+
+* Code Blocks
+
+Inline code blocks work as follows:
+
+#+begin_src python
+  import random
+
+  foo = random.randrange(1, 11)
+  print(foo)
+#+end_src
+
+Included source code blocks work too:
+
+#+include: "./src/foo.py" src python
+
+* Math
+
+\sum
