@@ -6,9 +6,11 @@ Exploring the use of [[https://wiki.contextgarden.net/Main_Page][ConTeXt]] for a
 
 *** Workflows
 
-- [ ] vanilla context files
-- [ ] exporting from org via [[https://github.com/Jason-S-Ross/ox-context][ox-context]]
-- [ ] docker container (via [[https://hub.docker.com/r/contextgarden/context][contextgarden/context]])
+- [X] Emacs(.tex -> .pdf) (via auctex)
+- [X] Emacs(.org -> .tex -> .pdf) (via [[https://github.com/Jason-S-Ross/ox-context][ox-context]])
+- [ ] Emacs(.org -> .tex -> .pdf) (via [[https://github.com/Jason-S-Ross/ox-context][ox-context]] with a custom environment)
+- [ ] Docker(.tex -> .pdf) (via [[https://hub.docker.com/r/contextgarden/context][contextgarden/context]])
+- [ ] Docker(.org -> .tex -> .pdf) (via [[https://hub.docker.com/r/contextgarden/context][contextgarden/context]])
 
 *** Document Types
 
