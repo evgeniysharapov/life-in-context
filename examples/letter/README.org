@@ -1,0 +1,3 @@
+* References
+
+- [[https://github.com/ccnlab/deep-obj-cat/blob/1f1d04c818c7f968214c57b019db5fc1b1001b9b/papers/psyrev/sub1_covlet.pdf][Cover letter with header]]
