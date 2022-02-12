@@ -1,6 +1,6 @@
 * References
 
-- [[https://github.com/mgradowski/cv][mgradowski/cv]]
+- [[https://github.com/mgradowski/cv][mgradowski/cv]] (single-page)
 - [[https://github.com/lrusso96/cv][lrusso96/cv]] (Lua)
 - [[https://github.com/duonagem/Curriculum][dunagem/Curriculum]]
 - [[https://github.com/chpolste/lebenslauf][chpolste/lebenslauf]]
