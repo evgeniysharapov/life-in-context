@@ -4,10 +4,10 @@ out := main.pdf
 .DEFAULT_GOAL := cleanbuild
 
 $(out): $(in)
-	context $<
+	context --purgeall $<
 
 clean:
-	rm -rf *.log *.tuc generated* $(out)
+	rm -rf generated* $(out)
 .PHONY: clean
 
 cleanbuild: clean $(out)
