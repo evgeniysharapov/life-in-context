@@ -1,0 +1,24 @@
+% A ConTeXt environment for reuse across multiple documents.
+% See https://wiki.contextgarden.net/Project_structure
+
+\startenvironment env_examples
+
+  \usecolors[crayola]
+
+  \setupinteraction
+    [state=start,
+      color=CeruleanBlue,
+      contrastcolor=CeruleanBlue,
+      author={John Gosset},
+      keyword={tex,context,typesetting,examples}]
+  
+  % OPTIONAL: Add arbitrary key-value pairs.
+  \pdfbackendsetinfo{foo}{bar}
+  \pdfbackendsetinfo{awesome}{absolutely}
+
+  \setuppapersize[letter, portrait]
+  \setuppagenumbering[location=]
+  \setuphead[title][align=center, style=\bfd]
+  \setupbodyfont[modern]
+
+\stopenvironment

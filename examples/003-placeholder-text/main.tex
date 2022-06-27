@@ -1,24 +1,21 @@
-% Simple tex document.
+% Example of how to use placeholder text.
 % See:
 % - https://www.contextgarden.net/Dummy_text
 % - https://www.pragma-ade.com/general/magazines/mag-0007.pdf
 
-\usemodule[ipsum,visual]
+\environment env_examples
 
-\setuppapersize[letter]
+\usemodule[ipsum,visual]
 
 \setupinteraction
   [state=start,
-    title={Do Makefiles Really Work?},
-    subtitle={An Example},
-    author={Jerry Q. Hacker},
-    keyword={tex,context,typesetting,examples}]
-
+    title={How to use placeholder text},
+    subtitle={An Example}]
 
 
 \starttext
 
-\title{Do Makefiles Really Work?}
+\title{Example: Placeholder Text}
 
 \section{Knuth}
 \input knuth
@@ -35,6 +32,5 @@
 
 \subsection{Lines}
 \fakelines{3}{5}
-
 
 \stoptext

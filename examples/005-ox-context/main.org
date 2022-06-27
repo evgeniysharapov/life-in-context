@@ -1,12 +1,12 @@
 # Example of using ox-context.
 # See https://github.com/Jason-S-Ross/ox-context
 
-#+title: Example: ox-context
+#+title: Org File To PDF via ox-context
 #+author: Jerry Q. Hacker
 #+bibliography: references.bib
 
 #+options: syntax:vim
-#+context_header_extra: \setuppapersize[letter]
+#+context_header_extra: \environment env_examples
 
 
 * An Example Document
@@ -46,7 +46,30 @@ Here is a link to [[https://example.com/][example.com]].
 
 * Images
 
+\placefigure[here]{An example image}{\externalfigure[https://www.netzgesta.de/instant/images/test.jpg]}
+
 * Diagrams
+
+\startMPcode
+  draw fullcircle scaled 3cm;
+\stopMPcode
+
+\usemodule[statistical-charts]
+\def\edudataone{38.303,35.556,34.158,33.313,31.101}
+\def\yearlabelstwo{2013,2014,2015,2016,2017}
+\linechart[basic][
+ylength=5,
+xscale=1.6, yscale=0.1,
+left=0.5,
+distance=1.6,
+linecolor=limegreen, linewidth=1.5,
+dotscolor=islamicgreen,
+dotswidth=8, dotslabels=yes,
+axesunits=yes,
+xunit=Year,
+yunit=Number of graduates(thousands)][
+data={\edudataone},
+xlabels={\yearlabelstwo}]
 
 * Code Blocks
 
@@ -65,4 +88,10 @@ Included source code blocks work too:
 
 * Math
 
+$e = mc^{2}$
+
 \sum
+
+* Placeholder Text
+
+\input knuth

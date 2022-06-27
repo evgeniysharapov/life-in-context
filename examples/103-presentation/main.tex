@@ -1,0 +1,31 @@
+\setuppapersize[S6][S6]
+\setuppagenumbering[state=stop]
+\setuptolerance[verytolerant,stretch] 
+
+\switchtobodyfont[modern,20pt]
+
+\definehead[slide][subject]
+
+\starttext
+
+\setvariables
+  [metadata]
+  [
+    title={My Awesome Presentation},
+    author={ConTeXt user},
+    date={Jan 13, 2013},
+    location={ConTeXt Interactive Tutorial},
+  ]
+
+\startslide[title={Sample Slide}]
+  \input knuth
+\stopslide
+
+% TODO: Make \startslide block do this automatically.
+\pagebreak
+
+\startslide[title={Groovy Slide}]
+  Foo bar baz
+\stopslide
+
+\stoptext

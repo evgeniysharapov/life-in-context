@@ -1,4 +1,4 @@
-% Created 2022-01-17 Mon 11:16
+% Created 2022-06-27 Mon 05:15
 
 \usemodule[vim]
 
@@ -16,9 +16,9 @@
 % Document Metadata
 %===============================================================================
 \setupdocument[metadata:author={Jerry Q. Hacker},
-   metadata:title={Example: ox-context},
+   metadata:title={Org File To PDF via ox-context},
    metadata:email={jgosset@mtlmp-jgosset1},
-   metadata:creator={Emacs 27.2 (Org mode 9.5.2)},
+   metadata:creator={Emacs 27.2 (Org mode 9.5.4)},
    metadata:language={en},
    Lang={En},
    metadata:date={\currentdate}]
@@ -229,7 +229,7 @@
 %===============================================================================
 % Commands from CONTEXT_HEADER_EXTRA
 %===============================================================================
-\setuppapersize[letter]
+\environment env_examples
 
 %===============================================================================
 % Document Body
@@ -257,7 +257,7 @@
    list={An Example Document},
    marking={An Example Document},
    bookmark={An Example Document},
-   reference={sec:orgef3c5a8}]
+   reference={sec:orgfa8ec15}]
 
 This is an example of using \ConTeXt{} to format a document.
 
@@ -272,7 +272,7 @@ It can be exported via {\tt org-export-dispatch} using {\tt C-c C-e C o}.
    list={Emphasis},
    marking={Emphasis},
    bookmark={Emphasis},
-   reference={sec:org585e7a1}]
+   reference={sec:org31193a4}]
 
 Text can be formatted as:
 
@@ -294,7 +294,7 @@ Text can be formatted as:
    list={Links},
    marking={Links},
    bookmark={Links},
-   reference={sec:org0babac5}]
+   reference={sec:org1081847}]
 
 Links work!
 
@@ -309,11 +309,11 @@ Here is a link to \goto{example.com}[url(https://example.com/)].
    list={Tables},
    marking={Tables},
    bookmark={Tables},
-   reference={sec:orgffa1e8a}]
+   reference={sec:org10f4dc1}]
 
 \startplacetable
 [location={split,force,here},
-   reference={tab:org2806204}]
+   reference={tab:org31fbdbb}]
 \startxtable
 [split={yes},
    header={repeat}]
@@ -349,8 +349,9 @@ Here is a link to \goto{example.com}[url(https://example.com/)].
    list={Images},
    marking={Images},
    bookmark={Images},
-   reference={sec:org2ad713a}]
+   reference={sec:org6d8926f}]
 
+\placefigure[here]{An example image}{\externalfigure[https://www.netzgesta.de/instant/images/test.jpg]}
 
 \stopsection
 
@@ -360,8 +361,28 @@ Here is a link to \goto{example.com}[url(https://example.com/)].
    list={Diagrams},
    marking={Diagrams},
    bookmark={Diagrams},
-   reference={sec:org8eea461}]
+   reference={sec:orgc59a0c8}]
 
+\startMPcode
+  draw fullcircle scaled 3cm;
+\stopMPcode
+
+\usemodule[statistical-charts]
+\def\edudataone{38.303,35.556,34.158,33.313,31.101}
+\def\yearlabelstwo{2013,2014,2015,2016,2017}
+\linechart[basic]\[
+ylength=5,
+xscale=1.6, yscale=0.1,
+left=0.5,
+distance=1.6,
+linecolor=limegreen, linewidth=1.5,
+dotscolor=islamicgreen,
+dotswidth=8, dotslabels=yes,
+axesunits=yes,
+xunit=Year,
+yunit=Number of graduates(thousands)\]\[
+data=\{\edudataone\},
+xlabels=\{\yearlabelstwo\}\]
 
 \stopsection
 
@@ -371,13 +392,13 @@ Here is a link to \goto{example.com}[url(https://example.com/)].
    list={Code Blocks},
    marking={Code Blocks},
    bookmark={Code Blocks},
-   reference={sec:orgf1b2c4f}]
+   reference={sec:org3b25bbb}]
 
 Inline code blocks work as follows:
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={orge47bb7c}]
+   reference={org5dbc952}]
 \startOrgBlkSrcPython
 import random
 
@@ -390,7 +411,7 @@ Included source code blocks work too:
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={orgd344fe5}]
+   reference={org215e880}]
 \startOrgBlkSrcPython
 #!/usr/bin/env python3
 
@@ -407,9 +428,23 @@ for i in range(3):
    list={Math},
    marking={Math},
    bookmark={Math},
-   reference={sec:orgc903e93}]
+   reference={sec:org46353ea}]
+
+\m{e = mc^{2}}
 
 \m{∑}
+
+\stopsection
+
+
+\startsection[title={\OrgHeadline
+   [Text={Placeholder Text}]},
+   list={Placeholder Text},
+   marking={Placeholder Text},
+   bookmark={Placeholder Text},
+   reference={sec:orge6e6ef3}]
+
+\input knuth
 
 \stopsection
 
