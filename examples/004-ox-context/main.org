@@ -3,7 +3,7 @@
 
 #+title: Org File To PDF via ox-context
 #+author: Jerry Q. Hacker
-#+bibliography: references.bib
+# bibliography: references.bib
 
 #+options: syntax:vim
 #+context_header_extra: \environment env_examples
