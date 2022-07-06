@@ -1,4 +1,4 @@
-% Created 2022-07-06 Wed 10:34
+% Created 2022-07-06 Wed 11:36
 
 \usemodule[vim]
 
@@ -10,7 +10,7 @@
 % Table of Contents Configuration
 %===============================================================================
 \define\OrgTitleContents{{\tfc Contents}}
-\setupcombinedlist[content][list={section,subsection}]
+\setupcombinedlist[content][list={section,subsection,subsubsection}]
 
 %===============================================================================
 % Document Metadata
@@ -262,7 +262,7 @@
    list={About This Document},
    marking={About This Document},
    bookmark={About This Document},
-   reference={sec:orga079209}]
+   reference={sec:org1c015b8}]
 
 This is an example of using \goto{ox-context}[url(https://github.com/Jason-S-Ross/ox-context)] to export org-mode file content to \ConTeXt{} format.
 
@@ -271,13 +271,21 @@ Within Emacs, if {\tt ox-context} is installed, you can run {\tt org-export-disp
 \stopsection
 
 
-
 \startsection[title={\OrgHeadline
-   [Text={Emphasis}]},
+   [Text={Key Feature Examples}]},
+   list={Key Feature Examples},
+   marking={Key Feature Examples},
+   bookmark={Key Feature Examples},
+   reference={sec:orga4f5ce9}]
+
+
+\startsubsection[title={\OrgHeadline
+   [Todo={DONE},
+   Text={Emphasis}]},
    list={Emphasis},
    marking={Emphasis},
    bookmark={Emphasis},
-   reference={sec:orgd6e6aca}]
+   reference={sec:orgafa91f8}]
 
 Text can be formatted as:
 
@@ -290,33 +298,36 @@ Text can be formatted as:
 \item \inframed[frame=off]{\overstrike{Text can be strikethrough}}
 \stopitemize
 
-\stopsection
+\stopsubsection
 
 
 
-\startsection[title={\OrgHeadline
-   [Text={Links}]},
+\startsubsection[title={\OrgHeadline
+   [Todo={DONE},
+   Text={Links}]},
    list={Links},
    marking={Links},
    bookmark={Links},
-   reference={sec:org788e17c}]
+   reference={sec:org12abd8c}]
 
 Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
 
-\stopsection
+\stopsubsection
 
 
 
-\startsection[title={\OrgHeadline
-   [Text={Tables}]},
+\startsubsection[title={\OrgHeadline
+   [Todo={DONE},
+   Text={Tables}]},
    list={Tables},
    marking={Tables},
    bookmark={Tables},
-   reference={sec:org3b0c8be}]
+   reference={sec:orgbd280d5}]
 
 \startplacetable
 [location={split,force,here},
-   reference={tab:org1c02b39}]
+   title={A wonderful table},
+   reference={tab:org95e7d02}]
 \startxtable
 [split={yes},
    header={repeat}]
@@ -343,56 +354,59 @@ Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
 \stopxtable
 \stopplacetable
 
-\stopsection
+\stopsubsection
 
 
 
-\startsection[title={\OrgHeadline
-   [Text={Images}]},
+\startsubsection[title={\OrgHeadline
+   [Todo={DONE},
+   Text={Images}]},
    list={Images},
    marking={Images},
    bookmark={Images},
-   reference={sec:org814dcae}]
+   reference={sec:orgacbe619}]
 
 \placefigure[here]{An example image}{\externalfigure[https://www.netzgesta.de/instant/images/test.jpg]}
 
-\stopsection
+\stopsubsection
 
 
-\startsection[title={\OrgHeadline
-   [Text={Diagrams}]},
+\startsubsection[title={\OrgHeadline
+   [Todo={DONE},
+   Text={Diagrams}]},
    list={Diagrams},
    marking={Diagrams},
    bookmark={Diagrams},
-   reference={sec:org9ec60b1}]
+   reference={sec:org4991c33}]
 
 \startMPcode
   draw fullcircle scaled 3cm;
 \stopMPcode
 
-\stopsection
+\stopsubsection
 
 
-\startsection[title={\OrgHeadline
-   [Text={Code Blocks}]},
+\startsubsection[title={\OrgHeadline
+   [Todo={DONE},
+   Text={Code Blocks}]},
    list={Code Blocks},
    marking={Code Blocks},
    bookmark={Code Blocks},
-   reference={sec:org46e3f38}]
+   reference={sec:orge119b08}]
 
 Inline code blocks work as follows:
 
 
-\startsubsection[title={\OrgHeadline
+\startsubsubsection[title={\OrgHeadline
    [Text={Python Example}]},
    list={Python Example},
    marking={Python Example},
    bookmark={Python Example},
-   reference={sec:org6a7cb3b}]
+   reference={sec:org487eca2}]
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={orge886211}]
+   reference={orgf91a343}]
 \startOrgBlkSrcPython
 import random
 
@@ -401,21 +415,21 @@ print(foo)
 \stopOrgBlkSrcPython
 \stopOrgListingEnumEmpty
 
-\stopsubsection
+\stopsubsubsection
 
 
-\startsubsection[title={\OrgHeadline
+\startsubsubsection[title={\OrgHeadline
    [Text={Python Example (included from separate file)}]},
    list={Python Example (included from separate file)},
    marking={Python Example (included from separate file)},
    bookmark={Python Example (included from separate file)},
-   reference={sec:orgba773d4}]
+   reference={sec:org4f923e1}]
 
 Included source code blocks work too:
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={org8b5aa5d}]
+   reference={orgddb3043}]
 \startOrgBlkSrcPython
 #!/usr/bin/env python3
 
@@ -424,19 +438,19 @@ for i in range(3):
 \stopOrgBlkSrcPython
 \stopOrgListingEnumEmpty
 
-\stopsubsection
+\stopsubsubsection
 
 
-\startsubsection[title={\OrgHeadline
+\startsubsubsection[title={\OrgHeadline
    [Text={CUE Example}]},
    list={CUE Example},
    marking={CUE Example},
    bookmark={CUE Example},
-   reference={sec:orgc6004d2}]
+   reference={sec:orgf7b1efd}]
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={orgd02e40e}]
+   reference={org2b7471d}]
 \startOrgBlkSrcCue
 #Foo: uint
 
@@ -444,70 +458,75 @@ bar: #Foo & 42
 \stopOrgBlkSrcCue
 \stopOrgListingEnumEmpty
 
+\stopsubsubsection
+
 \stopsubsection
 
-\stopsection
 
 
-
-\startsection[title={\OrgHeadline
-   [Text={Math}]},
+\startsubsection[title={\OrgHeadline
+   [Todo={DONE},
+   Text={Math}]},
    list={Math},
    marking={Math},
    bookmark={Math},
-   reference={sec:org0c8d594}]
+   reference={sec:orgfb167c0}]
 
 \m{e = mc^{2}}
 
 \m{∑}
 
-\stopsection
-
-
-\startsection[title={\OrgHeadline
-   [Text={Placeholder Text}]},
-   list={Placeholder Text},
-   marking={Placeholder Text},
-   bookmark={Placeholder Text},
-   reference={sec:orgb4385b0}]
-
-\input knuth
-
-\stopsection
-
-
-\startsection[title={\OrgHeadline
-   [Text={Bibliography}]},
-   list={Bibliography},
-   marking={Bibliography},
-   bookmark={Bibliography},
-   reference={sec:org7a8b0df}]
+\stopsubsection
 
 
 \startsubsection[title={\OrgHeadline
-   [Text={A Citation}]},
-   list={A Citation},
-   marking={A Citation},
-   bookmark={A Citation},
-   reference={sec:orgd582f38}]
+   [Todo={DONE},
+   Text={Placeholder Text}]},
+   list={Placeholder Text},
+   marking={Placeholder Text},
+   bookmark={Placeholder Text},
+   reference={sec:org94cb222}]
 
-A citation for an example website \cite[example].
+\input knuth
 
 \stopsubsection
 
 
 \startsubsection[title={\OrgHeadline
+   [Todo={TODO},
+   Text={Bibliography}]},
+   list={Bibliography},
+   marking={Bibliography},
+   bookmark={Bibliography},
+   reference={sec:orgc845e09}]
+
+
+\startsubsubsection[title={\OrgHeadline
+   [Text={A Citation}]},
+   list={A Citation},
+   marking={A Citation},
+   bookmark={A Citation},
+   reference={sec:org09e83ae}]
+
+A citation for an example website \cite[example].
+
+\stopsubsubsection
+
+
+\startsubsubsection[title={\OrgHeadline
    [Text={The Bibliography}]},
    list={The Bibliography},
    marking={The Bibliography},
    bookmark={The Bibliography},
-   reference={sec:org9d8933f}]
+   reference={sec:org2d7b71b}]
 
 \startbackmatter
 \startchapter[title=Biblio]
 \placelistofpublications
 \stopchapter
 \stopbackmatter
+
+\stopsubsubsection
 
 \stopsubsection
 

@@ -4,7 +4,6 @@
 #+title: Org File To PDF via ox-context
 #+author: Jerry Q. Hacker
 #+bibliography: references.bib
-
 #+options: syntax:vim
 #+context_header_extra: \environment env_examples
 
@@ -15,8 +14,9 @@ This is an example of using [[https://github.com/Jason-S-Ross/ox-context][ox-con
 
 Within Emacs, if ~ox-context~ is installed, you can run ~org-export-dispatch~ using =C-c C-e C o= to generate a PDF via \ConTeXt{}.
 
+* Key Feature Examples
 
-* Emphasis
+** DONE Emphasis
 
 Text can be formatted as:
 
@@ -28,13 +28,14 @@ Text can be formatted as:
 - +Text can be strikethrough+
 
 
-* Links
+** DONE Links
 
 Links work! Here's a link to [[https://example.com/][example.com]].
 
 
-* Tables
+** DONE Tables
 
+#+Caption: A wonderful table
 | name | description       |
 |------+-------------------|
 | foo  | A thing that foos |
@@ -42,21 +43,21 @@ Links work! Here's a link to [[https://example.com/][example.com]].
 | baz  | A thing that bazs |
 
 
-* Images
+** DONE Images
 
 \placefigure[here]{An example image}{\externalfigure[https://www.netzgesta.de/instant/images/test.jpg]}
 
-* Diagrams
+** DONE Diagrams
 
 \startMPcode
   draw fullcircle scaled 3cm;
 \stopMPcode
 
-* Code Blocks
+** DONE Code Blocks
 
 Inline code blocks work as follows:
 
-** Python Example
+*** Python Example
 #+begin_src python
   import random
 
@@ -64,13 +65,13 @@ Inline code blocks work as follows:
   print(foo)
 #+end_src
 
-** Python Example (included from separate file)
+*** Python Example (included from separate file)
 
 Included source code blocks work too:
 
 #+include: "./src/foo.py" src python
 
-** CUE Example
+*** CUE Example
 #+begin_src cue
   #Foo: uint
 
@@ -78,23 +79,23 @@ Included source code blocks work too:
 #+end_src
 
 
-* Math
+** DONE Math
 
 $e = mc^{2}$
 
 \sum
 
-* Placeholder Text
+** DONE Placeholder Text
 
 \input knuth
 
-* Bibliography
+** TODO Bibliography
 
-** A Citation
+*** A Citation
 
 A citation for an example website \cite[example].
 
-** The Bibliography
+*** The Bibliography
 
 \startbackmatter
 \startchapter[title=Biblio]
