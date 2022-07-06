@@ -9,11 +9,11 @@
 #+context_header_extra: \environment env_examples
 
 
-* An Example Document
+* About This Document
 
-This is an example of using \ConTeXt{} to format a document.
+This is an example of using [[https://github.com/Jason-S-Ross/ox-context][ox-context]] to export org-mode file content to \ConTeXt{} format.
 
-It can be exported via ~org-export-dispatch~ using =C-c C-e C o=.
+Within Emacs, if ~ox-context~ is installed, you can run ~org-export-dispatch~ using =C-c C-e C o= to generate a PDF via \ConTeXt{}.
 
 
 * Emphasis
@@ -30,9 +30,7 @@ Text can be formatted as:
 
 * Links
 
-Links work!
-
-Here is a link to [[https://example.com/][example.com]].
+Links work! Here's a link to [[https://example.com/][example.com]].
 
 
 * Tables
@@ -54,27 +52,11 @@ Here is a link to [[https://example.com/][example.com]].
   draw fullcircle scaled 3cm;
 \stopMPcode
 
-\usemodule[statistical-charts]
-\def\edudataone{38.303,35.556,34.158,33.313,31.101}
-\def\yearlabelstwo{2013,2014,2015,2016,2017}
-\linechart[basic][
-ylength=5,
-xscale=1.6, yscale=0.1,
-left=0.5,
-distance=1.6,
-linecolor=limegreen, linewidth=1.5,
-dotscolor=islamicgreen,
-dotswidth=8, dotslabels=yes,
-axesunits=yes,
-xunit=Year,
-yunit=Number of graduates(thousands)][
-data={\edudataone},
-xlabels={\yearlabelstwo}]
-
 * Code Blocks
 
 Inline code blocks work as follows:
 
+** Python Example
 #+begin_src python
   import random
 
@@ -82,9 +64,19 @@ Inline code blocks work as follows:
   print(foo)
 #+end_src
 
+** Python Example (included from separate file)
+
 Included source code blocks work too:
 
 #+include: "./src/foo.py" src python
+
+** CUE Example
+#+begin_src cue
+  #Foo: uint
+
+  bar: #Foo & 42
+#+end_src
+
 
 * Math
 

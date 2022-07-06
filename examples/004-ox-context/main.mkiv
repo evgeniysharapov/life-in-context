@@ -1,4 +1,4 @@
-% Created 2022-07-06 Wed 09:44
+% Created 2022-07-06 Wed 10:06
 
 \usemodule[vim]
 
@@ -10,7 +10,7 @@
 % Table of Contents Configuration
 %===============================================================================
 \define\OrgTitleContents{{\tfc Contents}}
-\setupcombinedlist[content][list={section}]
+\setupcombinedlist[content][list={section,subsection}]
 
 %===============================================================================
 % Document Metadata
@@ -30,6 +30,11 @@
   [syntax=python,escape=command]
 \definevimtyping[OrgBlkSrcPython]
   [syntax=python,escape=command]
+
+\definevimtyping[OrgInlineSrcCue]
+  [syntax=cue,escape=command]
+\definevimtyping[OrgBlkSrcCue]
+  [syntax=cue,escape=command]
 % Define a basic headline command
 \def\OrgHeadline#1[#2]{%
   \getparameters
@@ -50,6 +55,7 @@
 
 
 
+
 % Define on bullet command
 \define\OrgItemOn{\boxplus}
 % Define off bullet command
@@ -58,7 +64,6 @@
 \define\OrgItemTrans{\boxtimes}
 % LaTeX-style descriptive enumerations
 \definedescription[OrgDesc]
-
 
 
 
@@ -81,6 +86,7 @@
    text=Listing,
    headalign=middle,
    alternative=top]
+
 \setupxtable[OrgTableTopRow][]
 \setupxtable[OrgTableBottomRow][]
 \setupxtable[OrgTableLeftCol][]
@@ -252,15 +258,15 @@
 
 
 \startsection[title={\OrgHeadline
-   [Text={An Example Document}]},
-   list={An Example Document},
-   marking={An Example Document},
-   bookmark={An Example Document},
-   reference={sec:org660f3b2}]
+   [Text={About This Document}]},
+   list={About This Document},
+   marking={About This Document},
+   bookmark={About This Document},
+   reference={sec:orgb872e14}]
 
-This is an example of using \ConTeXt{} to format a document.
+This is an example of using \goto{ox-context}[url(https://github.com/Jason-S-Ross/ox-context)] to export org-mode file content to \ConTeXt{} format.
 
-It can be exported via {\tt org-export-dispatch} using {\tt C-c C-e C o}.
+Within Emacs, if {\tt ox-context} is installed, you can run {\tt org-export-dispatch} using {\tt C-c C-e C o} to generate a PDF via \ConTeXt{}.
 
 \stopsection
 
@@ -271,7 +277,7 @@ It can be exported via {\tt org-export-dispatch} using {\tt C-c C-e C o}.
    list={Emphasis},
    marking={Emphasis},
    bookmark={Emphasis},
-   reference={sec:org9a562ea}]
+   reference={sec:orgc75ca5a}]
 
 Text can be formatted as:
 
@@ -293,11 +299,9 @@ Text can be formatted as:
    list={Links},
    marking={Links},
    bookmark={Links},
-   reference={sec:orgd99994b}]
+   reference={sec:org0c0c1dd}]
 
-Links work!
-
-Here is a link to \goto{example.com}[url(https://example.com/)].
+Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
 
 \stopsection
 
@@ -308,11 +312,11 @@ Here is a link to \goto{example.com}[url(https://example.com/)].
    list={Tables},
    marking={Tables},
    bookmark={Tables},
-   reference={sec:orge0c7b9e}]
+   reference={sec:orga3ae673}]
 
 \startplacetable
 [location={split,force,here},
-   reference={tab:orgb9b5fdc}]
+   reference={tab:org2e63efc}]
 \startxtable
 [split={yes},
    header={repeat}]
@@ -348,7 +352,7 @@ Here is a link to \goto{example.com}[url(https://example.com/)].
    list={Images},
    marking={Images},
    bookmark={Images},
-   reference={sec:org17e6f8d}]
+   reference={sec:org9e727b1}]
 
 \placefigure[here]{An example image}{\externalfigure[https://www.netzgesta.de/instant/images/test.jpg]}
 
@@ -360,28 +364,11 @@ Here is a link to \goto{example.com}[url(https://example.com/)].
    list={Diagrams},
    marking={Diagrams},
    bookmark={Diagrams},
-   reference={sec:org1ff1a5f}]
+   reference={sec:org9679065}]
 
 \startMPcode
   draw fullcircle scaled 3cm;
 \stopMPcode
-
-\usemodule[statistical-charts]
-\def\edudataone{38.303,35.556,34.158,33.313,31.101}
-\def\yearlabelstwo{2013,2014,2015,2016,2017}
-\linechart[basic]\[
-ylength=5,
-xscale=1.6, yscale=0.1,
-left=0.5,
-distance=1.6,
-linecolor=limegreen, linewidth=1.5,
-dotscolor=islamicgreen,
-dotswidth=8, dotslabels=yes,
-axesunits=yes,
-xunit=Year,
-yunit=Number of graduates(thousands)\]\[
-data=\{\edudataone\},
-xlabels=\{\yearlabelstwo\}\]
 
 \stopsection
 
@@ -391,13 +378,21 @@ xlabels=\{\yearlabelstwo\}\]
    list={Code Blocks},
    marking={Code Blocks},
    bookmark={Code Blocks},
-   reference={sec:org1412074}]
+   reference={sec:orgcffab5a}]
 
 Inline code blocks work as follows:
 
+
+\startsubsection[title={\OrgHeadline
+   [Text={Python Example}]},
+   list={Python Example},
+   marking={Python Example},
+   bookmark={Python Example},
+   reference={sec:org825c5fc}]
+
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={orgb803850}]
+   reference={org7608dc7}]
 \startOrgBlkSrcPython
 import random
 
@@ -406,11 +401,21 @@ print(foo)
 \stopOrgBlkSrcPython
 \stopOrgListingEnumEmpty
 
+\stopsubsection
+
+
+\startsubsection[title={\OrgHeadline
+   [Text={Python Example (included from separate file)}]},
+   list={Python Example (included from separate file)},
+   marking={Python Example (included from separate file)},
+   bookmark={Python Example (included from separate file)},
+   reference={sec:org4277e28}]
+
 Included source code blocks work too:
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={org2f62351}]
+   reference={orgf6290f1}]
 \startOrgBlkSrcPython
 #!/usr/bin/env python3
 
@@ -418,6 +423,43 @@ for i in range(3):
     print("Hello from an imported file!")
 \stopOrgBlkSrcPython
 \stopOrgListingEnumEmpty
+
+\stopsubsection
+
+
+\startsubsection[title={\OrgHeadline
+   [Text={CUE Example}]},
+   list={CUE Example},
+   marking={CUE Example},
+   bookmark={CUE Example},
+   reference={sec:org0ddc105}]
+
+\startOrgListingEnumEmpty
+  [location={force,split},
+   reference={org8ce3335}]
+\startOrgBlkSrcCue
+#Foo: uint
+
+bar: #Foo & 42
+\stopOrgBlkSrcCue
+\stopOrgListingEnumEmpty
+
+\stopsubsection
+
+\stopsection
+
+
+
+\startsection[title={\OrgHeadline
+   [Text={Math}]},
+   list={Math},
+   marking={Math},
+   bookmark={Math},
+   reference={sec:orgedc8950}]
+
+\m{e = mc^{2}}
+
+\m{∑}
 
 \stopsection
 
@@ -427,7 +469,7 @@ for i in range(3):
    list={Placeholder Text},
    marking={Placeholder Text},
    bookmark={Placeholder Text},
-   reference={sec:orgea0479d}]
+   reference={sec:org6d02c14}]
 
 \input knuth
 
