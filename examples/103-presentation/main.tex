@@ -1,12 +1,13 @@
-\setuppapersize[S6][S6]
+\setuppapersize[S6]
 \setuppagenumbering[state=stop]
 \setuptolerance[verytolerant,stretch] 
 
 \switchtobodyfont[modern,20pt]
 
 \definehead[slide][subject]
-
-\starttext
+\setuphead[slide][
+  page=yes,
+]
 
 \setvariables
   [metadata]
@@ -17,12 +18,15 @@
     location={ConTeXt Interactive Tutorial},
   ]
 
-\startslide[title={Sample Slide}]
-  \input knuth
-\stopslide
+\starttext
 
-% TODO: Make \startslide block do this automatically.
-\pagebreak
+\startslide[title={Sample Slide}]
+  \startitemize
+  \item Nice first slide
+  \item Pretty great overall!
+  \item Hope the next one's good too.
+  \stopitemize
+\stopslide
 
 \startslide[title={Groovy Slide}]
   Foo bar baz
