@@ -1,4 +1,4 @@
-% Created 2022-07-06 Wed 10:06
+% Created 2022-07-06 Wed 10:34
 
 \usemodule[vim]
 
@@ -262,7 +262,7 @@
    list={About This Document},
    marking={About This Document},
    bookmark={About This Document},
-   reference={sec:orgb872e14}]
+   reference={sec:orga079209}]
 
 This is an example of using \goto{ox-context}[url(https://github.com/Jason-S-Ross/ox-context)] to export org-mode file content to \ConTeXt{} format.
 
@@ -277,7 +277,7 @@ Within Emacs, if {\tt ox-context} is installed, you can run {\tt org-export-disp
    list={Emphasis},
    marking={Emphasis},
    bookmark={Emphasis},
-   reference={sec:orgc75ca5a}]
+   reference={sec:orgd6e6aca}]
 
 Text can be formatted as:
 
@@ -299,7 +299,7 @@ Text can be formatted as:
    list={Links},
    marking={Links},
    bookmark={Links},
-   reference={sec:org0c0c1dd}]
+   reference={sec:org788e17c}]
 
 Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
 
@@ -312,11 +312,11 @@ Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
    list={Tables},
    marking={Tables},
    bookmark={Tables},
-   reference={sec:orga3ae673}]
+   reference={sec:org3b0c8be}]
 
 \startplacetable
 [location={split,force,here},
-   reference={tab:org2e63efc}]
+   reference={tab:org1c02b39}]
 \startxtable
 [split={yes},
    header={repeat}]
@@ -352,7 +352,7 @@ Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
    list={Images},
    marking={Images},
    bookmark={Images},
-   reference={sec:org9e727b1}]
+   reference={sec:org814dcae}]
 
 \placefigure[here]{An example image}{\externalfigure[https://www.netzgesta.de/instant/images/test.jpg]}
 
@@ -364,7 +364,7 @@ Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
    list={Diagrams},
    marking={Diagrams},
    bookmark={Diagrams},
-   reference={sec:org9679065}]
+   reference={sec:org9ec60b1}]
 
 \startMPcode
   draw fullcircle scaled 3cm;
@@ -378,7 +378,7 @@ Links work! Here's a link to \goto{example.com}[url(https://example.com/)].
    list={Code Blocks},
    marking={Code Blocks},
    bookmark={Code Blocks},
-   reference={sec:orgcffab5a}]
+   reference={sec:org46e3f38}]
 
 Inline code blocks work as follows:
 
@@ -388,11 +388,11 @@ Inline code blocks work as follows:
    list={Python Example},
    marking={Python Example},
    bookmark={Python Example},
-   reference={sec:org825c5fc}]
+   reference={sec:org6a7cb3b}]
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={org7608dc7}]
+   reference={orge886211}]
 \startOrgBlkSrcPython
 import random
 
@@ -409,13 +409,13 @@ print(foo)
    list={Python Example (included from separate file)},
    marking={Python Example (included from separate file)},
    bookmark={Python Example (included from separate file)},
-   reference={sec:org4277e28}]
+   reference={sec:orgba773d4}]
 
 Included source code blocks work too:
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={orgf6290f1}]
+   reference={org8b5aa5d}]
 \startOrgBlkSrcPython
 #!/usr/bin/env python3
 
@@ -432,11 +432,11 @@ for i in range(3):
    list={CUE Example},
    marking={CUE Example},
    bookmark={CUE Example},
-   reference={sec:org0ddc105}]
+   reference={sec:orgc6004d2}]
 
 \startOrgListingEnumEmpty
   [location={force,split},
-   reference={org8ce3335}]
+   reference={orgd02e40e}]
 \startOrgBlkSrcCue
 #Foo: uint
 
@@ -455,7 +455,7 @@ bar: #Foo & 42
    list={Math},
    marking={Math},
    bookmark={Math},
-   reference={sec:orgedc8950}]
+   reference={sec:org0c8d594}]
 
 \m{e = mc^{2}}
 
@@ -469,9 +469,47 @@ bar: #Foo & 42
    list={Placeholder Text},
    marking={Placeholder Text},
    bookmark={Placeholder Text},
-   reference={sec:org6d02c14}]
+   reference={sec:orgb4385b0}]
 
 \input knuth
+
+\stopsection
+
+
+\startsection[title={\OrgHeadline
+   [Text={Bibliography}]},
+   list={Bibliography},
+   marking={Bibliography},
+   bookmark={Bibliography},
+   reference={sec:org7a8b0df}]
+
+
+\startsubsection[title={\OrgHeadline
+   [Text={A Citation}]},
+   list={A Citation},
+   marking={A Citation},
+   bookmark={A Citation},
+   reference={sec:orgd582f38}]
+
+A citation for an example website \cite[example].
+
+\stopsubsection
+
+
+\startsubsection[title={\OrgHeadline
+   [Text={The Bibliography}]},
+   list={The Bibliography},
+   marking={The Bibliography},
+   bookmark={The Bibliography},
+   reference={sec:org9d8933f}]
+
+\startbackmatter
+\startchapter[title=Biblio]
+\placelistofpublications
+\stopchapter
+\stopbackmatter
+
+\stopsubsection
 
 \stopsection
 
